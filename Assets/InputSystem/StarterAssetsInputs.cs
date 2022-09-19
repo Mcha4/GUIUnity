@@ -75,6 +75,12 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
+
+		//OnDisable funtion to remove the error message
+		private void OnDisable()
+		{
+			GetComponent<PlayerInput>().actions = null;
+		}
 	}
 	
 }
